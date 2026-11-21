@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Harsha Vardhan Reddy — video editor. Cinematic Instagram Reels, YouTube Shorts and 4K AI-upscaled edits."
+    />
+    <title>Harsha Vardhan Reddy — Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav-wrap">
+      <div class="scroll-playhead" id="scrollPlayhead" aria-hidden="true"></div>
+      <nav class="nav container" aria-label="Main">
+        <a class="brand" href="#top">
+          <span class="brand-mark">HVR</span>
+          <span class="brand-full">Harsha&nbsp;Vardhan&nbsp;Reddy</span>
+        </a>
+        <span class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open for freelance work
+        </span>
+        <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="mobile-menu">
+          <li><a href="#reel">Reel</a></li>
+          <li><a href="#pipeline">Process</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-resume" href="resume.pdf" target="_blank" rel="noopener">View Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- ============ HERO / MONITOR ============ -->
+      <section id="reel" class="hero container">
+        <span class="hero-glow hero-glow-a" aria-hidden="true"></span>
+        <span class="hero-glow hero-glow-b" aria-hidden="true"></span>
+        <p class="eyebrow mono">Editing reel — 2024 to present</p>
+        <h1 class="hero-title">
+          Edits that keep people<br />
+          watching<span class="accent-dot">.</span>
+        </h1>
+        <p class="hero-sub">
+          I edit Instagram Reels, YouTube Shorts and cinematic videos. Every video is
+          enhanced and upscaled to 4K·60 using Topaz Video AI before it's delivered.
+        </p>
+
+        <div class="monitor" data-monitor>
+          <div class="monitor-frame">
+            <video
+              class="monitor-video"
+              id="monitorVideo"
+              playsinline
+              muted
+              loop
+              autoplay
+              preload="metadata"
+              poster="assets/posters/poster-1.jpg"
+              src="assets/videos/timeline-1.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="monitor-hud" aria-hidden="true">
+              <span class="hud-rec"><i></i>REC</span>
+              <span class="hud-code mono" id="timecode">00:00:00:00</span>
+            </div>
+
+            <button class="monitor-sound" id="soundToggle" aria-pressed="false" aria-label="Toggle sound">
+              <span class="icon-muted">🔇</span>
+              <span class="icon-loud">🔊</span>
+            </button>
+
+            <p class="monitor-note" id="monitorNote" aria-live="polite"></p>
+          </div>
+
+          <!-- scrub bar -->
+          <div class="scrub" id="scrub">
+            <div class="scrub-track">
+              <div class="scrub-fill" id="scrubFill"></div>
+              <div class="scrub-head" id="scrubHead"></div>
+            </div>
+          </div>
+
+          <!-- timeline / clip switcher -->
+          <div class="track" id="track" role="tablist" aria-label="Select edit">
+            <button
+              class="clip is-active"
+              role="tab"
+              aria-selected="true"
+              data-src="assets/videos/timeline-1.mp4"
+              data-poster="assets/posters/poster-1.jpg"
+              data-title="Punchy cuts and smooth motion"
+              data-desc="A short-form edit, enhanced and upscaled to 4K·60 with Topaz Video AI. Color and stabilization included."
+              data-index="01"
+            >
+              <img src="assets/posters/poster-1.jpg" alt="" />
+              <span class="clip-index mono">CLIP 01</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-2.mp4"
+              data-poster="assets/posters/poster-2.jpg"
+              data-title="Cut to match the music"
+              data-desc="A cinematic edit with frame enhancement and noise reduction using Topaz. 4K·60 upscale available on request."
+              data-index="02"
+            >
+              <img src="assets/posters/poster-2.jpg" alt="" />
+              <span class="clip-index mono">CLIP 02</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-3.mp4"
+              data-poster="assets/posters/poster-3.jpg"
+              data-title="Fast pacing, made for trends"
+              data-desc="A high-energy edit with color grading, ready for Instagram and other social platforms."
+              data-index="03"
+            >
+              <img src="assets/posters/poster-3.jpg" alt="" />
+              <span class="clip-index mono">CLIP 03</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-4.mp4"
+              data-poster="assets/posters/poster-4.jpg"
+              data-title="Mahesh Babu — title card"
+              data-desc="A fan-edit title card built in After Effects: layered fire elements, parallax cutouts and animated type, composited and timed to a beat."
+              data-index="04"
+            >
+              <img src="assets/posters/poster-4.jpg" alt="" />
+              <span class="clip-index mono">CLIP 04</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-5.mp4"
+              data-poster="assets/posters/poster-5.jpg"
+              data-title="Birthday edit — SFX pass"
+              data-desc="Same birthday tribute cut on the raw SFX pass: every hit, whoosh and impact synced frame-by-frame to the action before music was layered in."
+              data-audio="SFX only"
+              data-index="05"
+            >
+              <img src="assets/posters/poster-5.jpg" alt="" />
+              <span class="clip-badge mono">SFX only</span>
+              <span class="clip-index mono">CLIP 05</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-6.mp4"
+              data-poster="assets/posters/poster-6.jpg"
+              data-title="Birthday edit — SFX + music"
+              data-desc="The finished Mahesh Babu birthday tribute: SFX layer combined with a full music track for the final deliverable, cut across multiple film scenes."
+              data-audio="SFX + music"
+              data-index="06"
+            >
+              <img src="assets/posters/poster-6.jpg" alt="" />
+              <span class="clip-badge mono">SFX + music</span>
+              <span class="clip-index mono">CLIP 06</span>
+            </button>
+            <button
+              class="clip"
+              role="tab"
+              aria-selected="false"
+              data-src="assets/videos/timeline-7.mp4"
+              data-poster="assets/posters/poster-7.jpg"
+              data-title="Spider-Man — fan edit"
+              data-desc="A comic-style Spider-Man fan edit: multi-source clips cut to the beat, layered text and compound clips composited in DaVinci Resolve."
+              data-index="07"
+            >
+              <img src="assets/posters/poster-7.jpg" alt="" />
+              <span class="clip-index mono">CLIP 07</span>
+            </button>
+          </div>
+
+          <div class="clip-caption">
+            <h2 id="clipTitle">Punchy cuts and smooth motion</h2>
+            <span class="audio-badge mono" id="clipAudioBadge" hidden></span>
+            <p id="clipDesc">
+              A short-form edit, enhanced and upscaled to 4K·60 with Topaz Video AI.
+              Color and stabilization included.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STAT STRIP ============ -->
+      <section class="stat-strip container reveal" aria-label="Track record">
+        <div class="stat">
+          <span class="stat-num mono" data-counter="41" data-format="kplus">0</span>
+          <span class="stat-label">Instagram followers (both pages)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono" data-counter="2024" data-format="year">0</span>
+          <span class="stat-label">Editing full-time since</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono" data-format="static">4K·60</span>
+          <span class="stat-label">Max delivery resolution</span>
+        </div>
+      </section>
+
+      <!-- ============ PIPELINE / PROCESS ============ -->
+      <section id="pipeline" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow mono">Render pipeline</p>
+          <h2>How I edit a project, step by step</h2>
+        </div>
+        <ol class="pipeline">
+          <li class="pipeline-step">
+            <span class="step-code mono">CUT</span>
+            <h3>Cut the footage</h3>
+            <p>I trim the raw footage down to a paced timeline, keeping only the moments that hold attention.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="step-code mono">ENHANCE</span>
+            <h3>Enhance with AI</h3>
+            <p>Topaz Video AI cleans up noise, sharpens detail and upscales the footage to a clean 4K·60.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="step-code mono">GRADE</span>
+            <h3>Add motion and color</h3>
+            <p>After Effects motion graphics and a color grade give the edit its final look.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="step-code mono">DELIVER</span>
+            <h3>Export and deliver</h3>
+            <p>I export the video for your platform using Adobe Media Encoder, on time, with a free revision included.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ TOOLKIT ============ -->
+      <section id="toolkit" class="container section reveal">
+        <div class="section-head">
+          <p class="eyebrow mono">Layers panel</p>
+          <h2>Tools I use</h2>
+        </div>
+        <div class="layers">
+          <div class="layers-col">
+            <p class="layers-heading mono">// software</p>
+            <ul class="layer-list">
+              <li><span>Adobe After Effects</span><span class="tag">Advanced</span></li>
+              <li><span>Topaz Video AI</span><span class="tag">Advanced</span></li>
+              <li><span>Adobe Media Encoder</span><span class="tag">Advanced</span></li>
+              <li><span>DaVinci Resolve</span><span class="tag tag-mid">Intermediate</span></li>
+              <li><span>ComfyUI</span><span class="tag tag-mid">Intermediate</span></li>
+            </ul>
+          </div>
+          <div class="layers-col">
+            <p class="layers-heading mono">// skills</p>
+            <ul class="layer-list">
+              <li><span>Motion graphics</span></li>
+              <li><span>AI video enhancement and upscaling</span></li>
+              <li><span>Short-form content editing</span></li>
+              <li><span>Social media content strategy</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="container section reveal about">
+        <div class="about-copy about-copy--full">
+          <p class="eyebrow mono">About</p>
+          <h2>Building an editing-first audience since 2024</h2>
+          <p>
+            I'm Harsha, a video editor and motion graphics artist. I run two Instagram pages that
+            are all about editing, <a href="https://instagram.com/harsha.ae" target="_blank" rel="noreferrer noopener">@harsha.ae</a>
+            and <a href="https://instagram.com/harshaframes.drp" target="_blank" rel="noreferrer noopener">@harshaframes.drp</a>,
+            with 41K+ followers combined who watch for the cut, not just the content.
+          </p>
+          <p>
+            That same care for pacing goes into every client project too: viral-style Reels and
+            Shorts, cinematic edits, and AI-enhanced masters, delivered on time.
+          </p>
+          <div class="about-meta mono">
+            <span>Telugu (native) · English (professional)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT / EXPORT ============ -->
+      <section id="contact" class="container section reveal">
+        <div class="export-panel">
+          <div class="export-head">
+            <p class="eyebrow mono">Export</p>
+            <h2>Let's work together</h2>
+            <p class="export-sub">Send me your footage, platform and deadline, and I'll get back to you with a timeline and quote.</p>
+          </div>
+          <div class="export-rows mono">
+            <a class="export-row" href="mailto:workwithharsha.ae@gmail.com">
+              <span>Email</span>
+              <span class="export-value">workwithharsha.ae@gmail.com</span>
+            </a>
+            <a class="export-row" href="https://instagram.com/harsha.ae" target="_blank" rel="noreferrer noopener">
+              <span>Instagram</span>
+              <span class="export-value">@harsha.ae · 21K+</span>
+            </a>
+            <a class="export-row" href="https://instagram.com/harshaframes.drp" target="_blank" rel="noreferrer noopener">
+              <span>Instagram</span>
+              <span class="export-value">@harshaframes.drp · 20K+</span>
+            </a>
+            <a class="export-row" href="resume.pdf" target="_blank" rel="noopener">
+              <span>Resume</span>
+              <span class="export-value">View resume ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Harsha Vardhan Reddy. All videos shown are my own edits.</p>
+    </footer>
+  </body>
+</html>
